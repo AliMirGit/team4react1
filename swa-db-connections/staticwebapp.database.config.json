@@ -30,8 +30,8 @@
     }
   },
   "entities": {
-    "Product":{
-      "source": "SalesLT.Product",
+    "Feedback":{
+      "source": "CustFeedback",
       "permissions": [
         {
           "actions": ["read"],
