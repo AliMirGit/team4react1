@@ -16,7 +16,7 @@ function Form() {
         setFeedback({...feedback, [e.target.name]: e.target.value });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();  // prevent page reload
         const data = {
             firstname: feedback.firstname,
