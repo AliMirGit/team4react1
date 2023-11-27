@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Button } from 'react-dom';
 
 function Navbar() {
+  //read token
+  let token;
+
+  try {
+    token = document.cookie.split(';').find(c => c.trim().startsWith('StaticWebAppsAuthCookie=')).split('=')[1];
+  } catch (e) {
+    token = null;
+  }
+  
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
       <div className="container">
@@ -19,6 +29,15 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/feedback-form">Feedback Form</Link>
             </li>
+            { token ?
+              <li className="nav-item">
+              <a href="/.auth/logout">LOGOUT</a>
+              </li>
+              :          
+              <li className="nav-item">
+              <a href="/.auth/login/github">LOGIN</a>
+              </li>
+            }
           </ul>
         </div>
       </div>

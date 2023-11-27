@@ -34,8 +34,12 @@
       "source": "CustFeedback",
       "permissions": [
         {
-          "actions": ["read"],
-          "role": "anonymous"
+          "role": "anonymous",
+          "actions": ["read"]
+        },
+        {
+          "role": "admin",
+          "actions": "*"
         }
       ]
     }

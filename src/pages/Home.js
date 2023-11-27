@@ -55,7 +55,7 @@ function Home(){
                     <div className="col-md-12">
                         <div className="card">
                             <div className="card-header">
-                                <Link className="btn btn-primary float-end" to="/feedback-form">Submit Feedback</Link>
+                                <Link className="btn btn-primary float-end" to="/feedback-form">Give us Feedback</Link>
                             </div>
                             <div className="card-body">
                                 <table className="table table-striped">

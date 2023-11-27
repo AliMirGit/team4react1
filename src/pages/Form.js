@@ -30,12 +30,15 @@ function Form() {
         const response = await fetch(finalFormEndpoint, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'X-MS-API-ROLE': 'admin',
+                'Content-Type': 'application/json'
+                //'X-MS-API-ROLE': 'admin'
             },
-            body: JSON.stringify(data),            
+            body: JSON.stringify(data)         
         });
         if (!response.ok) {
+            console.log("Error, data=" + JSON.stringify(data));
+            console.log("Error, status=" + response.statusText);
+            console.table(response.value);
             throw new Error(response.statusText);
         }
 
