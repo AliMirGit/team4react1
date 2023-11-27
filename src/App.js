@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Navbar from './components/Navbar.js';
+import MyRouter from './router/index.js';
+
 
 function App() {
-  const [data, setData] = useState('');
-
-  useEffect(() => {
-    (async function () {
-      const { text } = await( await fetch(`/api/message`)).json();
-      setData(text);
-    })();
-  });
-
-  return <div>App.js calling API: {data}</div>;
+  //const value = 'Team4';
+  return (
+    <div>
+      <Navbar />
+      
+      <MyRouter />
+    </div>
+  );
 }
-
-
-//import React from 'react';
-
-//function App() {
-//  const value = 'World test1';
-//  return <div>Hello {value}</div>;
-//}
 
 export default App;
