@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 function Form() {
-    const [status, setStatus] = useState('');
-    const [message, setMessage] = useState('');
+    //const [status, setStatus] = useState('');
+    //const [message, setMessage] = useState('');
     const [feedback, setFeedback] = useState({
         firstname: '',
         lastname: '',
