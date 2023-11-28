@@ -4,11 +4,11 @@ function Form() {
     //const [status, setStatus] = useState('');
     //const [message, setMessage] = useState('');
     const [feedback, setFeedback] = useState({
-        firstname: '',
-        lastname: '',
-        email: '',
-        rating: '',
-        comments: ''
+        FirstName: '',
+        LastName: '',
+        Email: '',
+        Rating: '',
+        Comments: ''
     })
 
     const handleInput = (e) => {
@@ -19,11 +19,11 @@ function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();  // prevent page reload
         const data = {
-            firstname: feedback.firstname,
-            lastname: feedback.lastname,
-            email: feedback.email,
-            rating: feedback.rating,
-            comments: feedback.comments            
+            FirstName: feedback.FirstName,
+            LastName: feedback.LastName,
+            Email: feedback.Email,
+            Rating: feedback.Rating,
+            Comments: feedback.Comments            
         }
         const finalFormEndpoint = '/data-api/rest/Feedback';
         console.log("target=" + finalFormEndpoint);
@@ -83,23 +83,23 @@ function Form() {
                                 <form onSubmit={handleSubmit}>
                                     <div className='mb-3'>
                                         <label>First Name</label>
-                                        <input type="text" name="firstname" value={feedback.firstname} onChange={handleInput} className='form-control' />
+                                        <input type="text" name="FirstName" value={feedback.FirstName} onChange={handleInput} className='form-control' />
                                     </div>
                                     <div className='mb-3'>
                                         <label>Last Name</label>
-                                        <input type="text" name="lastname" value={feedback.lastname} onChange={handleInput} className='form-control' />
+                                        <input type="text" name="LastName" value={feedback.LastName} onChange={handleInput} className='form-control' />
                                     </div>
                                     <div className='mb-3'>
                                         <label>Email</label>
-                                        <input type="text" name="email" value={feedback.email} onChange={handleInput} className='form-control' />
+                                        <input type="text" name="Email" value={feedback.Email} onChange={handleInput} className='form-control' />
                                     </div>
                                     <div className='mb-3'>
                                         <label>Rating</label>
-                                        <input type="text" name="rating" value={feedback.rating} onChange={handleInput} className='form-control' />
+                                        <input type="text" name="Rating" value={feedback.Rating} onChange={handleInput} className='form-control' />
                                     </div>
                                     <div className='mb-3'>
                                         <label>Comments</label>
-                                        <input type="text" name="comments" value={feedback.comments} onChange={handleInput} className='form-control' />
+                                        <input type="text" name="Comments" value={feedback.Comments} onChange={handleInput} className='form-control' />
                                     </div>
                                     <div className='mb-3'>
                                         <button type="submit" className='btn btn-primary'>Submit Feedback</button>
